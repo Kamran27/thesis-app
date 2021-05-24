@@ -147,12 +147,7 @@
       dialog: false,
       dialogDelete: false,
       headers: [
-          {
-            text: 'Titel',
-            align: 'start',
-            sortable: false,
-            value: 'titel',
-          },
+          { text: 'Titel', align: 'start', sortable: false, value: 'titel'},
           { text: 'Firma', value: 'firma' },
           { text: 'Professor', value: 'professor' },
           { text: 'Jahr', value: 'jahr' },
@@ -195,20 +190,7 @@
 
     methods: {
       initialize () {
-        this.theses = [
-          {
-             titel: 'Stadtreinugung',
-            firma: 'Apple',
-            professor: 'Müller',
-            jahr: 1995,
-          },
-          {
-             titel: 'Vue App',
-            firma: 'kraftwerk',
-            professor: 'hkjhk',
-            jahr: 37,
-          },
-        ]
+        this.theses = this.$store.state.theses
       },
 
       editItem (item) {

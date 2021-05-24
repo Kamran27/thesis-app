@@ -1,3 +1,4 @@
+
 <template>
   <v-card>
     <v-card-title>
@@ -35,20 +36,7 @@
           { text: 'Professor', value: 'professor' },
           { text: 'Jahr', value: 'jahr' },
         ],
-        theses: [
-          {
-            titel: 'Angebote Vue',
-            firma: 'webit!',
-            professor: 'Mustermann',
-            jahr: 2020,
-          },
-          {
-            titel: 'Etwicklung der Website',
-            firma: 'eon',
-            professor: 'Musterfrau',
-            jahr: 2021,
-          },
-        ],
+       theses: this.$store.state.theses,
       }
     },
   }

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app dark>
+    <v-app-bar app color="blue">
       <div class="d-flex align-center mr-2">
         Angebote für Abschlussarbeiten
       </div>

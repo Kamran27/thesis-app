@@ -13,11 +13,6 @@ export default new Router({
             component: () => import("./components/ThesisList")
         },
         {
-            path: "/theses/:id",
-            name: "thesis-details",
-            component: () => import("./components/Thesis")
-        },
-        {
             path: "/add",
             name: "add",
             component: () => import("./components/AddThesis")
