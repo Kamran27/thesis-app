@@ -229,8 +229,10 @@
       save () {
         if (this.editedIndex > -1) {
           Object.assign(this.theses[this.editedIndex], this.editedItem)
+          //this.$store.dispatch('saveTheses', this.editedItem);
         } else {
           this.theses.push(this.editedItem)
+          //this.$store.dispatch('saveTheses', this.editedItem);
         }
         this.close()
       },

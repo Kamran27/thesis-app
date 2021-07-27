@@ -16,6 +16,12 @@ export default new Router({
             path: "/add",
             name: "add",
             component: () => import("./components/AddThesis")
-        }
+        },
+        {
+            path: "/thesis/:id",
+            name: "thesis-watch",
+            params: true,
+            component: () => import("./components/ThesisWatch")
+        },
     ]
 });

@@ -1,4 +1,3 @@
-
 <template>
   <v-card>
     <v-card-title>
@@ -34,7 +33,11 @@
     </template>
     <template v-slot:expanded-item="{ headers }">
       <td :colspan="headers.length">
-        Hier kommt dann detailansicht und Button PDF-Erstellen!
+         <div>
+            <h1>Hello from the other side!</h1>
+            <h3>ekvmlefvm</h3>
+          </div>
+        Hier kommt dann detailansicht und Button PDF-Erstellen
       </td>
     </template>
     
@@ -45,15 +48,11 @@
 <script>
 
 //import Api from '@/service/api';
+import {mapState} from 'vuex';
 
   export default {
-     mounted() {
-        this.$store.dispatch('loadTheses');
-    },
     computed: {
-      theses() {
-        return this.$store.state.theses
-      }
+      ...mapState(['theses','tags'])
     },
     data () {
       return {
@@ -61,12 +60,7 @@
         singleExpand: false,
         search: '',
         headers: [
-          {
-            text: 'Titel',
-            align: 'start',
-            sortable: false,
-            value: 'titel',
-          },
+          { text: 'Titel', align: 'start',csortable: false, value: 'titel'},
           { text: 'Firma', value: 'firma' },
           { text: 'Professor', value: 'professor' },
           { text: 'Jahr', value: 'jahr' },

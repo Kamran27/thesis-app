@@ -12,6 +12,10 @@
       <v-btn to="/add" text>
         Admin
       </v-btn>
+      <v-spacer></v-spacer>
+      <v-btn target="_blank">
+        <span class="mr-5">Login</span>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -23,5 +27,9 @@
 <script>
 export default {
   name: "app",
+  mounted() {
+        this.$store.dispatch('loadTheses');
+        this.$store.dispatch('loadTags');
+    },
 };
 </script>
